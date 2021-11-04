@@ -24,38 +24,37 @@ int main(void)
         {
             if (!q.empty())
             {
-                printf("%d", q.front());
+                printf("%d\n", q.front());
                 q.pop();
             }
             else
-                printf("-1");
+                printf("-1\n");
         }
         else if (!strcmp(str, "size"))
         {
-            printf("%d", q.size());
+            printf("%d\n", q.size());
         }
         else if (!strcmp(str, "empty"))
         {
             if (!q.empty())
-                printf("0");
+                printf("0\n");
             else
-                printf("1");
+                printf("1\n");
         }
         else if (!strcmp(str, "front"))
         {
             if (!q.empty())
-                printf("%d", q.front());
+                printf("%d\n", q.front());
             else
-                printf("-1");
+                printf("-1\n");
         }
         else if (!strcmp(str, "back"))
         {
             if (!q.empty())
-                printf("%d", q.back());
+                printf("%d\n", q.back());
             else
-                printf("-1");
+                printf("-1\n");
         }
-        printf("\n");
     }
     return 0;
 }
