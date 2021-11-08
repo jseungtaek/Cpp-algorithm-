@@ -1,25 +1,28 @@
 #include <iostream>
 #include <stack>
 #include <vector>
+#include <string>
 
 using namespace std;
 
-int main(void) 
+int main(void)
 {
 	stack<char> data;
 	string str;
-	int i,flag;
-	
-	while(1)
+	int i, flag;
+
+	while (1)
 	{
 		getline(cin, str);
-		if (str==".")
+		if (str == ".")
 		{
 			break;
 		}
 		i = 0;
 		flag = 0;
-		while(str[i])
+		while (!data.empty())
+			data.pop();
+		while (str[i])
 		{
 			if (str[i] == '(' || str[i] == '[')
 			{
@@ -27,9 +30,17 @@ int main(void)
 			}
 			else if (str[i] == ')')
 			{
-				if(data.top() == '(')
+				if (!data.empty())
 				{
-					data.pop();
+					if (data.top() == '(')
+					{
+						data.pop();
+					}
+					else
+					{
+						flag = 1;
+						break;
+					}
 				}
 				else
 				{
@@ -39,9 +50,17 @@ int main(void)
 			}
 			else if (str[i] == ']')
 			{
-				if(data.top() == '[')
+				if (!data.empty())
 				{
-					data.pop();
+					if (data.top() == '[')
+					{
+						data.pop();
+					}
+					else
+					{
+						flag = 1;
+						break;
+					}
 				}
 				else
 				{
@@ -51,7 +70,7 @@ int main(void)
 			}
 			i++;
 		}
-		if (flag && !data.empty())
+		if (flag || !data.empty()) // 열린 괄호만 들어올 경우도 생각
 		{
 			cout << "no\n";
 		}
