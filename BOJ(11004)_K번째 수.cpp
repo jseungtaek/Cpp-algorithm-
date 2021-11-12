@@ -1,13 +1,13 @@
-//baekjoon 11004 K¹øÂ° ¼ö
+//baekjoon 11004 Kë²ˆì§¸ ìˆ˜
 #include <iostream>
 #include <algorithm>
 #include <vector>
 using namespace std;
-//algorithm header¿¡ ³»Àå µÇ¾î ÀÖ´Â sorted »ç¿ë
+//algorithm headerì— ë‚´ì¥ ë˜ì–´ ìˆëŠ” sorted ì‚¬ìš©
 int main(void)
 {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(NULL); //cinì˜ ì†ë„ í–¥ìƒ mergeë„ ì²˜ìŒì—ëŠ” ì‹œê°„ì´ˆê³¼ë¡œ í‹€ë ¸ì§€ë§Œ ì´ ì½”ë“œ ì¶”ê°€ í›„ í†µê³¼
     int N, K;
     vector<int> A;
     cin >> N >> K;
@@ -23,11 +23,11 @@ int main(void)
     return 0;
 }
 
-//baekjoon 11004 K¹øÂ° ¼ö
+//baekjoon 11004 Kë²ˆì§¸ ìˆ˜
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
-//merge_sort ±¸Çö
+//merge_sort êµ¬í˜„
 int *sorted;
 int *A;
 int N, K;
