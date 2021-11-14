@@ -1,4 +1,4 @@
-//baekjoon 11004 Kë²ˆì§¸ ìˆ˜ merge sort
+//baekjoon 11004 K¹øÂ° ¼ö merge sort
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
@@ -67,7 +67,7 @@ void merge_sort(int *data, int st, int end)
 int main(void)
 {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL); //cin ì†ë„ í–¥ìƒ
+    cin.tie(NULL); //cin ¼Óµµ Çâ»ó
     cin >> N >> K;
     A = (int *)malloc(sizeof(int) * N + 1);
     for (int i = 1; i <= N; i++)
@@ -79,7 +79,7 @@ int main(void)
     return 0;
 }
 
-//baekjoon 11004 Kë²ˆì§¸ ìˆ˜ (algorithm header ë‚´ìž¥ sorted)
+//baekjoon 11004 K¹øÂ° ¼ö (algorithm header ³»Àå sorted)
 #include <iostream>
 #include <algorithm>
 #include <vector>
